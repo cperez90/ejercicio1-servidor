@@ -1,4 +1,5 @@
 public class Participacio {
-  //  Rol();
+    public Rol rol;
     public int horesFetes;
+    public Desenvolupador desenvolupador;
 }
