@@ -16,4 +16,8 @@ public class Tasque {
     public List<Tasque> getDependencies() {
         return dependencies;
     }
+
+    public void addDependencies(Tasque tasque){
+        dependencies.add(tasque);
+    }
 }
