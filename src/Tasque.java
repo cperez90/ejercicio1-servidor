@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tasque {
     public String nom;
     public int horesEstimades;
-    public List<Tasque> dependencies;
+    public List<Tasque> dependencies = new ArrayList<Tasque>();
 
     public String getNom() {
         return nom;
