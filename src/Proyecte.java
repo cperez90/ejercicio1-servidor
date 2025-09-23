@@ -7,4 +7,19 @@ public class Proyecte {
     public List<Participacio> participan;
     public List<Tasque> tasques;
 
+    public String getNom() {
+        return nom;
+    }
+
+    public Date getDataInici() {
+        return dataInici;
+    }
+
+    public List<Participacio> getParticipan() {
+        return participan;
+    }
+
+    public List<Tasque> getTasques() {
+        return tasques;
+    }
 }

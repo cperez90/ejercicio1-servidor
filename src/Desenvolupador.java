@@ -1,7 +1,7 @@
 public class Desenvolupador {
     public String nom;
 
-    String getNom(){
+    public String getNom() {
         return nom;
     }
 }
