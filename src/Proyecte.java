@@ -41,5 +41,6 @@ public class Proyecte {
 
     public List<Tasque> ordenaTasques(List<Tasque> tasques) {
 
+        return tasques;
     }
 }
