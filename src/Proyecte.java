@@ -40,7 +40,17 @@ public class Proyecte {
     }
 
     public List<Tasque> ordenaTasques(List<Tasque> tasques) {
+        List<Tasque> tasquesOrdenades = new ArrayList<>(tasques);
+        tasquesOrdenades.sort((tasque1,tasque2) ->
+                Integer.compare(tasque1.getDependencies().size(), tasque2.getDependencies().size())
+        );
+        return tasquesOrdenades;
+    }
 
-        return tasques;
+    public void tasquesOrdenades(){
+        List<Tasque> ordenades = ordenaTasques(tasques);
+        for (Tasque tasque : ordenades) {
+            System.out.println("- "+ tasque.getNom()+": "+tasque.getDependencies().size()+" dependencies");
+        }
     }
 }

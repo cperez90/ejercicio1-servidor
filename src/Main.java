@@ -59,7 +59,7 @@ public class Main {
 
         System.out.println("Hores Totals "+ proyecte.horesDedicadesTotal(proyecte.tasques));
 
-
+        proyecte.tasquesOrdenades();
 
     }
 }
