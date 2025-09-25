@@ -58,7 +58,7 @@ public class Proyecte {
         System.out.println("Nom Proyecte: "+ proyecte.getNom());
         System.out.println("Desenvolupadors: ");
         for(Participacio participacio : participan){
-            System.out.println(participacio.getDesenvolupador().getNom()+"rol: "+participacio.getRol());
+            System.out.println(participacio.getDesenvolupador().getNom()+" tiene rol de: "+participacio.getRol());
         }
         System.out.println("Tasques: ");
         for(Tasque tasque : tasques){
