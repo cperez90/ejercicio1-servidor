@@ -62,9 +62,10 @@ public class Proyecte {
         }
         System.out.println("Tasques: ");
         for(Tasque tasque : tasques){
-            System.out.println(tasque.getNom());
+            System.out.print(tasque.getNom());
             for(Tasque tasque1 : tasque.dependencies)
-            System.out.println("depen de: " +tasque1.getNom());
+            System.out.print(" depen de: " +tasque1.getNom());
+            System.out.println(" ");
         }
         System.out.println("Hores totals: "+horesDedicadesTotal(tasques));
     }
