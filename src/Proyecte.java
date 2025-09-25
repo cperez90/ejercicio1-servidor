@@ -6,8 +6,8 @@ import java.util.List;
 public class Proyecte {
     public String nom;
     public LocalDate dataInici;
-    public List<Participacio> participan = new ArrayList<Participacio>();
-    public List<Tasque> tasques = new ArrayList<Tasque>();
+    private List<Participacio> participan = new ArrayList<Participacio>();
+    private List<Tasque> tasques = new ArrayList<Tasque>();
 
     public String getNom() {
         return nom;
