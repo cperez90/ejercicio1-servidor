@@ -5,8 +5,35 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        Desenvolupador desenvolupador1 = new Desenvolupador("Alexandra");
+        Desenvolupador desenvolupador2 = new Desenvolupador("Rosa");
+        Desenvolupador desenvolupador3 = new Desenvolupador("Sergio");
 
-        Desenvolupador desenvolupador1 = new Desenvolupador();
+        Tasque tasque1 = new Tasque("Manager IT",20);
+        Tasque tasque2 = new Tasque("Disseny IT",25);
+        tasque2.addDependencies(tasque1);
+        Tasque tasque3 = new Tasque("programador",28);
+        tasque3.addDependencies(tasque1);
+        Tasque tasque4 = new Tasque("desseny",36);
+        tasque4.addDependencies(tasque1);
+        tasque4.addDependencies(tasque2);
+
+        Participacio participacio1 = new Participacio(desenvolupador1,Rol.FRONTEND,30);
+        Participacio participacio2 = new Participacio(desenvolupador2,Rol.FULLSTACK,30);
+        Participacio participacio3 = new Participacio(desenvolupador3,Rol.BACKEND,30);
+
+        Proyecte proyecte1 = new Proyecte("Proyecte 1",LocalDate.now());
+        proyecte1.addParticipan(participacio1);
+        proyecte1.addParticipan(participacio2);
+        proyecte1.addParticipan(participacio3);
+        proyecte1.addTasques(tasque1);
+        proyecte1.addTasques(tasque2);
+        proyecte1.addTasques(tasque3);
+        proyecte1.addTasques(tasque4);
+
+        proyecte1.infoProyecte(proyecte1);
+
+        /*Desenvolupador desenvolupador1 = new Desenvolupador();
         desenvolupador1.nom = "Alexandra";
         Desenvolupador desenvolupador2 = new Desenvolupador();
         desenvolupador2.nom = "Rosa";
@@ -56,12 +83,10 @@ public class Main {
         proyecte.addTasques(tasque3);
         proyecte.addTasques(tasque4);
         proyecte.addParticipan(participacio1);
-        proyecte.addParticipan(participacio2);
+        proyecte.addParticipan(participacio2);*/
 
         //System.out.println("Hores Totals "+ proyecte.horesDedicadesTotal(proyecte.tasques));
         //proyecte.tasquesOrdenades();
-
-        proyecte.infoProyecte(proyecte);
 
     }
 }

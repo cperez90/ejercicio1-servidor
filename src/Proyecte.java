@@ -4,10 +4,17 @@ import java.util.Date;
 import java.util.List;
 
 public class Proyecte {
-    public String nom;
-    public LocalDate dataInici;
-    private List<Participacio> participan = new ArrayList<Participacio>();
-    private List<Tasque> tasques = new ArrayList<Tasque>();
+    private String nom;
+    private LocalDate dataInici;
+    private List<Participacio> participan;
+    private List<Tasque> tasques;
+
+    public Proyecte(String nom, LocalDate dataInici) {
+        this.nom = nom;
+        this.dataInici = dataInici;
+        this.participan = new ArrayList<>();
+        this.tasques = new ArrayList<>();
+    }
 
     public String getNom() {
         return nom;
@@ -56,16 +63,16 @@ public class Proyecte {
 
     void infoProyecte(Proyecte proyecte){
         System.out.println("Nom Proyecte: "+ proyecte.getNom());
+        System.out.println("Data Inici: "+ proyecte.getDataInici());
         System.out.println("Desenvolupadors: ");
         for(Participacio participacio : participan){
             System.out.println(participacio.getDesenvolupador().getNom()+" tiene rol de: "+participacio.getRol());
         }
         System.out.println("Tasques: ");
         for(Tasque tasque : tasques){
-            System.out.print(tasque.getNom());
-            for(Tasque tasque1 : tasque.dependencies)
-                System.out.print(" depen de: " +tasque1.getNom());
-                System.out.println(" ");
+            System.out.println(tasque.getNom());
+            for(Tasque tasque1 : tasque.getDependencies())
+                System.out.println(" depen de: " +tasque1.getNom());
         }
         System.out.println("Hores totals: "+horesDedicadesTotal(tasques));
     }

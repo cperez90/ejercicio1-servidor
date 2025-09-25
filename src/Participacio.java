@@ -1,7 +1,13 @@
 public class Participacio {
-    public Rol rol;
-    public int horesFetes;
-    public Desenvolupador desenvolupador;
+    private Rol rol;
+    private int horesFetes;
+    private Desenvolupador desenvolupador;
+
+    public Participacio(Desenvolupador desenvolupador,Rol rol, int horesFetes) {
+        this.rol = rol;
+        this.horesFetes = horesFetes;
+        this.desenvolupador = desenvolupador;
+    }
 
     public Rol getRol() {
         return rol;

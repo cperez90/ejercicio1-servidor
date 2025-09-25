@@ -2,9 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tasque {
-    public String nom;
-    public int horesEstimades;
-    public List<Tasque> dependencies = new ArrayList<Tasque>();
+    private String nom;
+    private int horesEstimades;
+    private List<Tasque> dependencies = new ArrayList<Tasque>();
+
+    public Tasque(String nom, int horesEstimades) {
+        this.nom = nom;
+        this.horesEstimades = horesEstimades;
+        this.dependencies = new ArrayList<>();
+    }
 
     public String getNom() {
         return nom;
