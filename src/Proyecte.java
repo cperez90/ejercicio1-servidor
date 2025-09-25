@@ -39,7 +39,7 @@ public class Proyecte {
         return total;
     }
 
-    public List<Tasque> ordenaTasques(List<Tasque> tasques) {
+    private List<Tasque> ordenaTasques(List<Tasque> tasques) {
         List<Tasque> tasquesOrdenades = new ArrayList<>(tasques);
         tasquesOrdenades.sort((tasque1,tasque2) ->
                 Integer.compare(tasque1.getDependencies().size(), tasque2.getDependencies().size())
@@ -52,5 +52,20 @@ public class Proyecte {
         for (Tasque tasque : ordenades) {
             System.out.println("- "+ tasque.getNom()+": "+tasque.getDependencies().size()+" dependencies");
         }
+    }
+
+    void infoProyecte(Proyecte proyecte){
+        System.out.println("Nom Proyecte: "+ proyecte.getNom());
+        System.out.println("Desenvolupadors: ");
+        for(Participacio participacio : participan){
+            System.out.println(participacio.getDesenvolupador().getNom()+"rol: "+participacio.getRol());
+        }
+        System.out.println("Tasques: ");
+        for(Tasque tasque : tasques){
+            System.out.println(tasque.getNom());
+            for(Tasque tasque1 : tasque.dependencies)
+            System.out.println("depen de: " +tasque1.getNom());
+        }
+        System.out.println("Hores totals: "+horesDedicadesTotal(tasques));
     }
 }

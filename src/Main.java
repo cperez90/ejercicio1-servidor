@@ -57,9 +57,10 @@ public class Main {
         proyecte.addTasques(tasque4);
         proyecte.addParticipan(participacio1);
 
-        System.out.println("Hores Totals "+ proyecte.horesDedicadesTotal(proyecte.tasques));
+        //System.out.println("Hores Totals "+ proyecte.horesDedicadesTotal(proyecte.tasques));
+        //proyecte.tasquesOrdenades();
 
-        proyecte.tasquesOrdenades();
+        proyecte.infoProyecte(proyecte);
 
     }
 }
